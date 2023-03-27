@@ -8,7 +8,7 @@ To run this project, you need to have Python 3 and Django installed on your syst
 Clone the repository:
 sh
 Copy code
-$ git https://github.com/Engleonardorm7/Django/tree/main/survey.git
+$ git clone https://github.com/Engleonardorm7/Survery-Django
 $ cd polls
 Install the dependencies:
 sh
