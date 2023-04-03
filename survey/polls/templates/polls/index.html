@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey app</title>
+</head>
+<body>
+    <header>
+        <h1>Survey</h1>
+    </header>
+    <main>
+        {% if question_list %}
+        <ul>
+            {% for question in question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>Polls are not available.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <a href="{% url 'polls:index' %}">Main menu</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">terms and Conditions</a>
+    </footer>
+
+
+
+</body>
+</html>
+
+
+{% comment %} {% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
 {% if question_list %}
     <ul>
         {% for question in question_list %}
@@ -6,4 +45,4 @@
     </ul>
 {% else %}
     <p>Polls are not available.</p>
-{% endif %}
+{% endif %} {% endcomment %}
